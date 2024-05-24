@@ -1,0 +1,315 @@
+/* Existing CSS */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    background-blend-mode: lighten;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poetsen One", sans-serif;
+    grid-template-columns: auto auto;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: rgb(221, 182, 9);
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar .menu .animation {
+    margin-left: 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.headerlogo {
+    position: relative;
+    left: -20px;
+}
+
+.navbar .links li {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.actionbtn {
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.togglebtn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .links, .actionbtn {
+        display: none;
+    }
+    .togglebtn {
+        display: block; /* Show toggle button on smaller screens */
+    }
+}
+
+@media (max-width: 750px) {
+    #background-video {
+       display: none;
+    } 
+    body {
+       background: url("burningtvscreen.mp4") no-repeat;
+       background-size: cover;
+    }
+}
+
+@font-face {
+    font-family: poetsen-one-regular;
+    src: url("https://fonts.google.com/specimen/Poetsen+One");
+}
+
+section {
+    color: #fff;
+}
+
+.container {
+    color: #e5e5e5;
+    font-size: 2.26rem;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.welcome-text {
+    margin-bottom: 1rem;
+}
+
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 2rem; /* Space between animation and button */
+    font-size: 2rem;
+}
+
+.animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.50rem;}
+    30% {margin-top: -5.50rem;}
+    40% {margin-top: -10.50rem;}
+    60% {margin-top: -10.50rem;}
+    70% {margin-top: -10.50rem;}
+    80% {margin-top: -10.50rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+}
+
+#landing {
+    color: #fff;
+    align-items: left;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+button {
+    font-family: inherit;
+    text-align: center;
+}
+
+#homeside {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#homeside button {
+    background-color: #8d0b71;
+    border-style: groove;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#homeside button:hover {
+    background-color: #005ea6; /* Darker shade on hover */
+}
+
+.split-container {
+    display: flex; 
+    height: 100vh;
+  }
+  
+.split {
+    flex: 1; /* Make each split div take up equal space */
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.left {
+    background-color: #111;
+}
+  
+.right {
+    background-color: rgb(230, 200, 200);
+}
+
+.split.right {
+    position: relative; /* Ensure proper positioning */
+    overflow: hidden;
+}
+
+.split.right .centered {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+.split.right .centered img {
+    width: 100%; 
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color:rgb(230, 200, 200);
+}
+
+h3 {
+    padding: 20px;
+}
+  
+.centered img {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.backtotop {
+    position: fixed; /* fixed positioning keeps the button in place */
+    bottom: 20px; 
+    right: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    --fade: 120px;
+    scroll-behavior: smooth;
+    background: linear-gradient(green 100vh, red 0);
+    mask: linear-gradient(#0000 calc(100vh + var(--offset)), #000 calc(100vh + var(--offset) + var(--fade)));
+}
+
+.backtotop a:hover {
+    color: #000000;
+}
+
+blockquote {
+    line-height: 2em;
+    text-wrap:balance;
+}
