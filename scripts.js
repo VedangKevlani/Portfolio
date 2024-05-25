@@ -22,6 +22,15 @@ $(document).ready(function() {
             scrollTop: targetOffset
         }, 800);
     });
+
+        // Scroll to target div when button is clicked
+        $(".projects-btn").on('click', function(event) {
+            var targetOffset = $("#projectside").offset().top;
+    
+            $('html, body').animate({
+                scrollTop: targetOffset
+            }, 800);
+        });
 });
 
 var backToTopButton = document.getElementById("backToTopBtn");

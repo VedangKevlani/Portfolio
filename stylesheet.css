@@ -233,9 +233,14 @@ button {
     background-color: #005ea6; /* Darker shade on hover */
 }
 
+#aboutside {
+    overflow: hidden;
+}
+
 .split-container {
     display: flex; 
     height: 100vh;
+    overflow: hidden;
   }
   
 .split {
@@ -245,7 +250,7 @@ button {
 }
   
 .left {
-    background-color: #111;
+    background-color: #000;
 }
   
 .right {
@@ -278,6 +283,7 @@ button {
     height: 100%;
     text-align: center;
     color:rgb(230, 200, 200);
+    overflow: hidden;
 }
 
 h3 {
@@ -311,5 +317,106 @@ h3 {
 
 blockquote {
     line-height: 2em;
+    font-size: 1.5rem;
     text-wrap:balance;
+}
+
+#projectside {
+    background: url("keyboard-glow.jpg");
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    background-color: #c8e5e7;
+    color: rgb(75, 66, 66);
+    text-align: center;
+    margin: 10px 5px;
+}
+
+/* Container for the flip card */
+.flip-card {
+    background-color: transparent;
+    width: 300px; /* Define the width of the card */
+    perspective: 1000px; /* Perspective property for 3D effect */
+    margin: 20px auto; /* Center the card */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  /* The front and back sides */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box; /* Include padding in width */
+    padding: 20px;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #8d0b71;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Style the front side (optional) */
+  .flip-card-front {
+    background-color: rgb(0, 0, 0);
+    color: black;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Flip the card when hovered */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .button-container a {
+    background-color: #0077b5;
+    color: #fff;
+    border: groove;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+  }
+
+  .button-container a:hover {
+    animation: 2s ease-in;
+  }
+
+#contactside {
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    background-color: #000000;
+    color: rgb(75, 66, 66);
+    text-align: center;
+    margin: 10px 5px;
 }
