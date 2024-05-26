@@ -326,7 +326,7 @@ blockquote {
     background-position: center;
     height: 100vh;
     padding: 20px;
-    overflow-x: hidden;
+    overflow-y: hidden;
     background-color: #c8e5e7;
     color: rgb(75, 66, 66);
     text-align: center;
@@ -415,8 +415,7 @@ blockquote {
     height: 100vh;
     padding: 20px;
     overflow-x: hidden;
-    background-color: #000000;
-    color: rgb(75, 66, 66);
+    background: #dbd5e0;
     text-align: center;
     margin: 10px 5px;
 }
